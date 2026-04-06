@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kitcho Mutfak Asistani - Gizlilik Politikasi</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #edf6ef;
+        --panel: rgba(255, 255, 255, 0.88);
+        --text: #2c3e2e;
+        --muted: #5d725d;
+        --accent: #9caf88;
+        --border: rgba(255, 255, 255, 0.72);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background:
+          radial-gradient(circle at top, rgba(156, 175, 136, 0.22), transparent 36%),
+          linear-gradient(180deg, #f8fbf7 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+      .wrap { max-width: 980px; margin: 0 auto; padding: 32px 16px 56px; }
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        padding: 24px;
+        box-shadow: 0 18px 40px rgba(93, 114, 93, 0.08);
+        backdrop-filter: blur(16px);
+      }
+      h1, h2 { margin: 0; }
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.15rem; margin-bottom: 10px; }
+      p, li { color: var(--muted); line-height: 1.75; }
+      .eyebrow { color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+      .grid { display: grid; gap: 18px; margin-top: 18px; }
+      .pillbar { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 999px;
+        padding: 10px 16px;
+        background: rgba(255,255,255,0.9);
+        border: 1px solid var(--border);
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      a { color: #4c6646; }
+      ul { margin: 0; padding-left: 20px; }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="card">
+        <div class="eyebrow">Kitcho Mutfak Asistani</div>
+        <h1 style="margin-top: 12px;">Gizlilik Politikasi</h1>
+        <p style="margin-top: 14px;">
+          Bu metin, Kitcho Mutfak Asistani icin Google Play ve App Store incelemelerinde kullanilabilecek
+          public gizlilik politikasi sayfasidir.
+        </p>
+        <div class="pillbar">
+          <a class="pill" href="/kitcho/terms">Kullanim Kosullari</a>
+          <a class="pill" href="/kitcho/account-deletion">Hesap Silme</a>
+          <a class="pill" href="/kitcho/support">Destek</a>
+        </div>
+      </section>
+
+      <div class="grid">
+        <section class="card">
+          <h2>Hangi verileri isleriz?</h2>
+          <p>Hesap olusturdugunda ad, e-posta adresi ve kimlik dogrulama bilgileri Firebase Authentication uzerinden islenir.</p>
+          <p>Envanterin, tarif tercihlerin, kaydettigin tarifler ve reddettigin tarif anahtarlari Firebase Cloud Firestore icinde hesabina bagli olarak saklanir.</p>
+          <p>Fis veya mutfak fotografi yuklersen, bu gorseller yalnizca urun tarama analizi icin islenir.</p>
+        </section>
+
+        <section class="card">
+          <h2>Verileri neden kullaniriz?</h2>
+          <p>Verileri; hesap girisi saglamak, cihazlar arasi senkron sunmak, envanterini saklamak, urunleri tanimak, tarif onerileri sunmak ve uygulama guvenligini korumak icin kullaniriz.</p>
+          <p>Verilerini reklam satmak veya pazarlama amacli ucuncu taraflarla paylasmak icin kullanmayiz.</p>
+        </section>
+
+        <section class="card">
+          <h2>Ucuncu taraf servisler</h2>
+          <ul>
+            <li>Firebase Authentication</li>
+            <li>Firebase Cloud Firestore</li>
+            <li>Firebase Functions</li>
+            <li>Google Gemini servisleri</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Saklama ve silme</h2>
+          <p>Hesap verilerin, hesabin aktif kaldigi surece saklanir.</p>
+          <p>Hesabini sildiginde, hesabina bagli kullanici verileri makul sure icinde kaldirilir. Guvenlik ve operasyonel loglar altyapi tarafinda sinirli sure tutulabilir.</p>
+        </section>
+
+        <section class="card">
+          <h2>Iletisim</h2>
+          <p>Gizlilik veya veri talepleri icin bize <a href="mailto:supportkitcho@gmail.com">supportkitcho@gmail.com</a> adresinden ulasabilirsin.</p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
