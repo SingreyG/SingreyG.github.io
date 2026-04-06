@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destek - Cubitz</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f8f9fa; color: #333; padding: 0;
+        }
+        header {
+            background: #aa3846; color: #fff;
+            padding: 20px 24px;
+            display: flex; align-items: center; gap: 16px;
+        }
+        header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 22px; }
+        header h1 { font-size: 22px; font-weight: 700; }
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+        .app-name { font-size: 28px; font-weight: 900; color: #aa3846; margin-bottom: 6px; }
+        .subtitle { color: #888; font-size: 15px; margin-bottom: 36px; }
+        .faq-item {
+            background: #fff; border: 1px solid #e0e0e0;
+            border-radius: 10px; margin-bottom: 14px; overflow: hidden;
+        }
+        .faq-q {
+            padding: 16px 20px; font-weight: 600; cursor: pointer;
+            display: flex; justify-content: space-between; align-items: center;
+            color: #333;
+        }
+        .faq-q:hover { background: #fafafa; }
+        .faq-a {
+            padding: 0 20px 16px; color: #555; line-height: 1.7;
+            display: none;
+        }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .arrow { transform: rotate(180deg); }
+        .arrow { transition: transform 0.2s; color: #aaa; }
+        .contact-section {
+            margin-top: 40px; background: #aa3846; border-radius: 14px;
+            padding: 32px 28px; color: #fff; text-align: center;
+        }
+        .contact-section h2 { font-size: 22px; margin-bottom: 10px; }
+        .contact-section p { opacity: 0.85; margin-bottom: 20px; line-height: 1.6; }
+        .email-btn {
+            display: inline-block; background: #fdd835; color: #7a1a20;
+            padding: 14px 32px; border-radius: 8px; font-weight: 900;
+            font-size: 16px; text-decoration: none;
+        }
+        footer {
+            text-align: center; padding: 30px; color: #999; font-size: 13px;
+            border-top: 1px solid #eee; margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">←</a>
+        <h1>Destek</h1>
+    </header>
+
+    <div class="container">
+        <div class="app-name">Cubitz Yardım</div>
+        <div class="subtitle">Sıkça sorulan sorular ve iletişim</div>
+
+        <div class="faq-item" onclick="toggle(this)">
+            <div class="faq-q">Oyun ilerlemem kaydoluyor mu? <span class="arrow">▼</span></div>
+            <div class="faq-a">Evet. En yüksek skor, en yüksek seviye ve oyun sayınız otomatik olarak cihazınıza kaydedilir. İnternet bağlantısı gerekmez.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggle(this)">
+            <div class="faq-q">Uygulamayı silersem verilerim gider mi? <span class="arrow">▼</span></div>
+            <div class="faq-a">Evet, uygulamayı cihazınızdan silerseniz kaydedilen skor ve seviye bilgileri de silinir. Şu an için bulut yedekleme özelliği bulunmamaktadır.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggle(this)">
+            <div class="faq-q">Ses efektlerini kapatabilir miyim? <span class="arrow">▼</span></div>
+            <div class="faq-a">Evet. Oyun içinde sağ üstteki ⚙️ ayarlar ikonuna tıklayarak sesi ve titreşimi açıp kapatabilirsiniz.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggle(this)">
+            <div class="faq-q">Macera Modunda seviyeler nasıl açılır? <span class="arrow">▼</span></div>
+            <div class="faq-a">Her seviyede blokların içindeki mücevherleri toplamanız gerekir. Hedef sayısına ulaştığınızda bir sonraki seviye açılır. Toplamda 100 seviye mevcuttur.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggle(this)">
+            <div class="faq-q">Oyun internetsiz çalışıyor mu? <span class="arrow">▼</span></div>
+            <div class="faq-a">Evet, Cubitz tamamen çevrimdışı çalışır. İnternet bağlantısı gerektirmez.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggle(this)">
+            <div class="faq-q">Bir blok sıkıştı / oyun dondu, ne yapmalıyım? <span class="arrow">▼</span></div>
+            <div class="faq-a">Uygulamayı kapatıp tekrar açmayı deneyin. Sorun devam ederse lütfen aşağıdaki e-posta adresiyle bize bildirin.</div>
+        </div>
+
+        <div class="contact-section">
+            <h2>Hâlâ yardıma mı ihtiyacınız var?</h2>
+            <p>Sorununuzu ve cihaz modelinizi belirterek bize yazın,<br>en kısa sürede geri döneceğiz.</p>
+            <a href="mailto:support@cubitz.com" class="email-btn">✉ E-posta Gönder</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Cubitz. Tüm hakları saklıdır.
+        · <a href="privacy.html" style="color:#aaa;">Gizlilik Politikası</a>
+        · <a href="terms.html" style="color:#aaa;">Kullanım Koşulları</a>
+    </footer>
+
+    <script>
+        function toggle(el) {
+            el.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

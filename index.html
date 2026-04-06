@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubitz - Block Puzzle Game</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #aa3846;
+            color: #fff;
+            min-height: 100vh;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            padding: 40px 20px;
+        }
+        .title {
+            font-size: 72px; font-weight: 900;
+            color: #fdd835;
+            text-shadow: 0 6px 0px #7a1a20;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 20px; opacity: 0.8; margin-bottom: 50px;
+        }
+        .links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+        .link-btn {
+            background: rgba(0,0,0,0.25);
+            color: #fff; text-decoration: none;
+            padding: 14px 28px; border-radius: 8px;
+            font-size: 16px; font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: background 0.2s;
+        }
+        .link-btn:hover { background: rgba(0,0,0,0.4); }
+        .store-row { display: flex; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; justify-content: center; }
+        .store-badge {
+            background: #000; color: #fff; text-decoration: none;
+            padding: 12px 22px; border-radius: 10px;
+            font-size: 14px; font-weight: 600;
+            display: flex; align-items: center; gap: 10px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .store-icon { font-size: 28px; }
+    </style>
+</head>
+<body>
+    <div class="title">Cubitz</div>
+    <div class="subtitle">Block Puzzle Game</div>
+
+    <div class="store-row">
+        <a href="https://play.google.com/store/apps/details?id=com.cubitz.app" class="store-badge" target="_blank">
+            <span class="store-icon">▶</span>
+            <span>Google Play'de İndir</span>
+        </a>
+        <a href="https://apps.apple.com/app/cubitz/id0000000000" class="store-badge" target="_blank">
+            <span class="store-icon"></span>
+            <span>App Store'dan İndir</span>
+        </a>
+    </div>
+
+    <div class="links">
+        <a href="privacy.html" class="link-btn">Gizlilik Politikası</a>
+        <a href="terms.html" class="link-btn">Kullanım Koşulları</a>
+        <a href="support.html" class="link-btn">Destek</a>
+    </div>
+</body>
+</html>
