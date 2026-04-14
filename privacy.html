@@ -52,73 +52,94 @@
 
     <div class="container">
         <div class="app-name">Cubitz</div>
-        <div class="updated">Son güncelleme: 6 Nisan 2025</div>
+        <div class="updated">Son güncelleme: 14 Nisan 2026</div>
 
         <div class="highlight">
-            Cubitz hiçbir kişisel veri toplamaz ve sunucuya veri göndermez.
+            Cubitz yalnızca puan tablosuna katılmayı seçen kullanıcılardan, açık onay alınarak veri toplar.
         </div>
 
         <h2>1. Topladığımız Bilgiler</h2>
         <p>
-            Cubitz uygulaması herhangi bir kişisel bilgi toplamaz. Uygulama tamamen
-            çevrimdışı çalışır ve internet bağlantısı gerektirmez.
+            Cubitz uygulaması iki tür veri saklar:
         </p>
+        <ul>
+            <li><strong>Cihazda (yerel) saklanan veriler:</strong> Oyun ilerlemesi, skor ve ayarlar yalnızca cihazınızda tutulur. Herhangi bir sunucuya iletilmez.</li>
+            <li><strong>Puan tablosu verileri (isteğe bağlı):</strong> Puan tablosuna katılmayı seçerseniz, onayınız alındıktan sonra <em>kullanıcı adı ve skorunuz</em> sunucumuzda saklanır.</li>
+        </ul>
 
         <h2>2. Cihazda Saklanan Veriler</h2>
-        <p>
-            Oyun ilerlemenizi kaydetmek için yalnızca cihazınızın yerel depolama
-            alanı (LocalStorage) kullanılır. Bu veriler yalnızca sizin cihazınızda
-            saklanır, hiçbir sunucuya veya üçüncü tarafa iletilmez.
-        </p>
-        <p>Cihazda saklanan veriler şunlardır:</p>
+        <p>Uygulama, cihazınızın yerel depolama alanında (LocalStorage) aşağıdaki bilgileri saklar:</p>
         <ul>
-            <li>En yüksek skor (bestScore)</li>
-            <li>Ulaşılan en yüksek seviye (highestLevel)</li>
-            <li>Toplam oynanan oyun sayısı (gamesPlayed)</li>
+            <li>En yüksek skor</li>
+            <li>Ulaşılan en yüksek seviye</li>
+            <li>Toplam oynanan oyun sayısı</li>
+            <li>Ses ve titreşim tercihleri</li>
+            <li>Kayıtlı oyun durumu</li>
+        </ul>
+        <p>Bu veriler yalnızca sizin cihazınızda kalır, üçüncü bir tarafa iletilmez.</p>
+
+        <h2>3. Puan Tablosu ve Sunucu Verileri</h2>
+        <p>
+            Puan tablosuna katılmak isteyen kullanıcılardan, bu işlemden önce açık onay alınır. Onay vermeniz halinde:
+        </p>
+        <ul>
+            <li>Seçtiğiniz kullanıcı adı</li>
+            <li>Oyun skorunuz</li>
+            <li>Kayıt tarihi</li>
         </ul>
         <p>
-            Bu verileri istediğiniz zaman uygulamayı cihazınızdan silerek temizleyebilirsiniz.
+            Bu bilgiler Supabase altyapısı üzerinde güvenli biçimde saklanır ve yalnızca sıralama ekranında gösterilmek amacıyla kullanılır. Herhangi bir üçüncü tarafla paylaşılmaz, reklam veya analiz amacıyla işlenmez.
         </p>
 
-        <h2>3. Üçüncü Taraf Hizmetler</h2>
+        <h2>4. Veri Silme Hakkı (KVKK / GDPR)</h2>
         <p>
-            Cubitz herhangi bir üçüncü taraf analitik, reklam veya izleme hizmeti
-            kullanmaz. Uygulama içinde reklam gösterilmez.
+            Verilerinizi istediğiniz zaman silebilirsiniz:
+        </p>
+        <ul>
+            <li>Uygulama içinde: <strong>Ayarlar → Diğer Ayarlar → Verilerimi Sil</strong> butonuna dokunun.</li>
+            <li>Bu işlem; tüm yerel verilerinizi ve puan tablosundaki kaydınızı kalıcı olarak siler.</li>
+            <li>Uygulamayı cihazınızdan kaldırırsanız yerel veriler de silinir.</li>
+        </ul>
+        <p>
+            Silme talebinizi e-posta yoluyla da iletebilirsiniz; en geç 30 gün içinde işleme alınır.
         </p>
 
-        <h2>4. Çocukların Gizliliği</h2>
+        <h2>5. Üçüncü Taraf Hizmetler</h2>
         <p>
-            Cubitz her yaş grubuna uygun bir oyundur. 13 yaş altı çocuklardan
-            bilerek herhangi bir kişisel veri toplamayız. Uygulamamız kişisel veri
-            toplamadığından, çocuklar için özel bir gizlilik riski bulunmamaktadır.
+            Cubitz, puan tablosu altyapısı için <strong>Supabase</strong> hizmetini kullanmaktadır. Supabase'in gizlilik politikasına <a href="https://supabase.com/privacy" target="_blank" style="color:#aa3846;">supabase.com/privacy</a> adresinden ulaşabilirsiniz.
+        </p>
+        <p>
+            Uygulama herhangi bir reklam ağı, analitik veya izleme aracı kullanmamaktadır.
         </p>
 
-        <h2>5. Uygulama İzinleri</h2>
+        <h2>6. Çocukların Gizliliği</h2>
         <p>
-            Cubitz herhangi bir cihaz izni (kamera, konum, mikrofon, kişiler vb.)
-            talep etmez.
+            Cubitz her yaş grubuna uygun bir oyundur (App Store yaş sınıfı: 9+). Puan tablosu özelliği isteğe bağlıdır ve açık onay gerektirir. 13 yaşın altındaki kullanıcılardan bilerek kişisel veri toplamayı hedeflemiyoruz; bu nedenle puan tablosunu yalnızca ebeveyn gözetiminde kullanmalarını öneririz.
         </p>
 
-        <h2>6. Değişiklikler</h2>
+        <h2>7. Uygulama İzinleri</h2>
         <p>
-            Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Değişiklikler
-            bu sayfada yayınlandığında yürürlüğe girer. Uygulamayı kullanmaya
-            devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.
+            Cubitz herhangi bir cihaz izni (kamera, konum, mikrofon, kişiler vb.) talep etmez.
         </p>
 
-        <h2>7. İletişim</h2>
+        <h2>8. Değişiklikler</h2>
         <p>
-            Gizlilik politikamız hakkında sorularınız için lütfen bizimle iletişime geçin.
+            Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Değişiklikler bu sayfada yayınlandığında yürürlüğe girer. Uygulamayı kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.
+        </p>
+
+        <h2>9. İletişim</h2>
+        <p>
+            Gizlilik politikamız veya verilerinizle ilgili talepleriniz için bizimle iletişime geçin.
         </p>
 
         <div class="contact-box">
-            <h3>Destek & İletişim</h3>
+            <h3>Destek &amp; İletişim</h3>
             <p><a href="mailto:supportcubitzgame@gmail.com">supportcubitzgame@gmail.com</a></p>
         </div>
     </div>
 
     <footer>
-        &copy; 2025 Cubitz. Tüm hakları saklıdır.
+        &copy; 2026 Cubitz. Tüm hakları saklıdır.
     </footer>
 </body>
 </html>
